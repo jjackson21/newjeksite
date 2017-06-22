@@ -13,3 +13,21 @@ markdown: kramdown
 exclude:
 - README.md
 - LICENSE.md
+
+contentful:
+  spaces:
+
+        space: 5ii8ejp5xdya         # Required
+        access_token: 72410257d7355ffccb33519a3851e5cdaea7719b2095f70a65c2c36515dc0653  # Required
+        cda_query:                  # Optional
+          include: 2
+          limit: 100
+        all_entries: true           # Optional - Defaults to false, only grabbing the amount set on CDA Query
+        all_entries_page_size: 1000 # Optional - Defaults to 1000, maximum amount of entries per CDA Request for all_entries
+        content_types:              # Optional
+          cat: MyCoolMapper
+        client_options:             # Optional
+          api_url:                  # Defaults to 'api.contentful.com' which is Production
+        base_path: app_path         # Optional - Defaults to Current directory
+        destination: destination_in_data # Optional - Defaults to _data/contentful/spaces
+        individual_entry_files: true # Optional - Defaults to false
